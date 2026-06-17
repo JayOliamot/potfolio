@@ -1,0 +1,300 @@
+/* --- Global Resets & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #070b24; /* Deep Navy Blue from layout */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #05081c;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #3b82f6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.msg-saved {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.btn-login {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-signup {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background: radial-gradient(circle at right, #1e1b4b 0%, #070b24 60%);
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 .highlight {
+    color: #22c55e; /* Bright Green text */
+}
+
+.hero-content p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background-color: #1e293b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid #334155;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* --- Search Bar & Filters --- */
+.search-container {
+    padding: 0 8% 40px 8%;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 6px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 15px;
+}
+
+.search-icon {
+    color: #6b7280;
+    margin-right: 10px;
+}
+
+.search-input-group input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.filter-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1f2937;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #d1d5db;
+}
+
+.btn-search {
+    background-color: #e5e7eb;
+    color: #111827;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Game Category Badges --- */
+.game-categories {
+    display: flex;
+    gap: 15px;
+    background-color: #111c44;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b112c;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    min-width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.category-item:hover {
+    transform: translateY(-2px);
+    border-color: #3b82f6;
+}
+
+.cat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.category-item span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* --- Product Cards Grid --- */
+.products-container {
+    padding: 0 8% 60px 8%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #0b112c;
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.product-card:hover {
+    border-color: #2563eb;
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.price-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(34, 197, 94, 0.9); /* Green semi-trans */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-title {
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #0b112c;
+    text-align: center;
+}
